@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#10110f"><title>About | Design Fusion</title><link rel="stylesheet" href="dfws-style-luxury.css"></head><body>
+<header class="site-header"><p class="eyebrow">Independent Creative Studio</p><h1 class="brand">Design Fusion</h1><p class="tagline">Design is thinking made visual.</p></header>
+<nav class="nav">
+<a href="home.html">Home</a><a href="about us.html">About</a><a href="skill.html">Skills</a><a href="project.html">Projects</a><a href="contect me .html">Contact</a>
+</nav>
+
+<main><div class="split"><div class="copy"><p class="kicker">A little about the studio</p><h2>Design is more than how it looks. It’s how it communicates.</h2><p>I’m Burhanuddin Lalji, the designer behind Design Fusion. I believe good design brings clarity to an idea, gives a brand its character and makes communication more meaningful.</p><p>My approach combines creative exploration with attention to detail. I work to understand the purpose behind each brief before shaping it into a visual solution.</p><a class="btn ghost" href="contect me .html">Let’s talk</a></div><div class="outline-art">DESIGN<br><span style="font-style:italic">with intention</span></div></div>
+<section class="instagram-section"><div class="section-head"><h2>Connect</h2><h3>Find Design Fusion on Instagram</h3><p id="instagramProfile">Instagram profile details will appear here.</p><a id="instagramLink" class="btn ghost"
+           href="https://www.instagram.com/designfusion000/"
+           target="_blank" rel="noopener noreferrer"
+           onclick="window.open(this.href, '_blank', 'noopener,noreferrer'); return false;"
+           aria-label="Open Design Fusion on Instagram in a new tab">
+            Visit Instagram
+        </a></div></section>
+</main>
+<script>
+// The default Instagram link works even when the website server is not running.
+// When the owner has saved a different username, update the link automatically.
+async function updateInstagramLink() {
+    try {
+        const response = await fetch("/api/settings");
+        if (!response.ok) return;
+
+        const settings = await response.json();
+        const username = (settings.instagram || "designfusion000").replace(/^@/, "");
+        if (!username) return;
+
+        const link = document.getElementById("instagramLink");
+        link.href = "https://www.instagram.com/" + encodeURIComponent(username) + "/";
+        document.getElementById("instagramProfile").textContent = "@" + username;
+    } catch (error) {
+        // Keep the default Instagram link if settings cannot be loaded.
+    }
+}
+
+updateInstagramLink();
+</script>
+
+<footer>© 2026 Design Fusion · Independent Graphic Design Studio</footer>
+</body></html>

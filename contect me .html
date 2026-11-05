@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10110f">
+  <title>Contact | Design Fusion</title>
+  <link rel="stylesheet" href="dfws-style-luxury.css">
+</head>
+<body>
+  <header class="site-header">
+    <p class="eyebrow">Independent Creative Studio</p>
+    <h1 class="brand">Design Fusion</h1>
+    <p class="tagline">Design is thinking made visual.</p>
+  </header>
+
+  <nav class="nav">
+    <a href="home.html">Home</a>
+    <a href="about us.html">About</a>
+    <a href="skill.html">Skills</a>
+    <a href="project.html">Projects</a>
+    <a href="contect me .html">Contact</a>
+  </nav>
+
+  <main>
+    <div class="section-head">
+      <h2>Start a conversation</h2>
+      <h3>Have an idea in mind?</h3>
+      <p>Share a little about your project. I’d be glad to hear what you’re creating.</p>
+    </div>
+
+    <div class="contact-grid">
+      <div>
+        <div class="contact-item">
+          <small>Studio</small>
+          <span>Design Fusion · Burhanuddin Lalji</span>
+        </div>
+        <div class="contact-item">
+          <small>Enquiries</small>
+          <span>desiginfusion000@gmail.com</span>
+        </div>
+        <div class="contact-item">
+          <small>Availability</small>
+          <span>Open to creative projects and collaborations</span>
+        </div>
+      </div>
+
+      <!-- FormSubmit sends the form details to the studio email. -->
+      <form class="panel" id="contactForm"
+            action="https://formsubmit.co/desiginfusion000@gmail.com"
+            method="POST">
+        <input type="hidden" name="_subject" value="New Design Fusion website enquiry">
+        <input type="hidden" name="_template" value="table">
+
+        <div class="field">
+          <label for="name">Your name</label>
+          <input id="name" name="name" type="text" required maxlength="100" placeholder="Name">
+        </div>
+
+        <div class="field">
+          <label for="email">Email address</label>
+          <input id="email" name="email" type="email" required maxlength="150" placeholder="you@example.com">
+        </div>
+
+        <div class="field">
+          <label for="message">Tell me about your project</label>
+          <textarea id="message" name="message" rows="5" required maxlength="5000" placeholder="A few details about your idea…"></textarea>
+        </div>
+
+        <button class="button" type="submit">Send Message</button>
+        <p class="hint" style="margin-top:12px">
+          Your message will be sent to Design Fusion. Please provide a correct email address so we can reply.
+        </p>
+      </form>
+    </div>
+  </main>
+
+  <footer>© 2026 Design Fusion · Independent Graphic Design Studio</footer>
+</body>
+</html>
